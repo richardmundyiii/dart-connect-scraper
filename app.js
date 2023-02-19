@@ -8,13 +8,16 @@ const main = async () => {
   await page.goto(url);
 
   let content = await page.evaluate(() => {
+    let magicArr = [];
     let divs = [...document.querySelectorAll("tr")];
-    let aLeauge = divs.splice(0, 2);
     let formatted = divs.map((div) => div.innerText.split("."));
-    let split = formatted.forEach((el) => {
-      el.split("t");
+    let bLeauge = formatted.splice(2, 8);
+    let aLeague = formatted.splice(4, 8);
+
+    aLeague[0][1].forEach((el) => {
+      magicArr.push(el);
     });
-    return split;
+    return magicArr;
   });
   console.log(content);
   await browser.close();

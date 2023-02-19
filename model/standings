@@ -1,0 +1,10 @@
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+
+const standingsSchema = new Schema({
+  week: {},
+  position: {},
+  teamName: {},
+});
+
+module.exports = mongoose.model("Standing", standingsSchema);
