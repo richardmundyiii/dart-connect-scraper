@@ -10,7 +10,11 @@ const main = async () => {
   let content = await page.evaluate(() => {
     let divs = [...document.querySelectorAll("tr")];
     let aLeauge = divs.splice(0, 2);
-    return divs.map((div) => div.innerText.split("\t"));
+    let formatted = divs.map((div) => div.innerText.split("."));
+    let split = formatted.forEach((el) => {
+      el.split("t");
+    });
+    return split;
   });
   console.log(content);
   await browser.close();
