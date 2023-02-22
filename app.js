@@ -14,13 +14,14 @@ const main = async () => {
     let divs = [...document.querySelectorAll("tr")];
     let formatted = divs.map((div) => div.innerText.replace(/\t/g, " "));
     // let bLeauge = formatted.splice(2, 8);
-    let aLeague = formatted.splice(2, 8);
+    let aLeague = formatted;
 
     // aLeague.forEach((el) => {
+    //   el.split(" ");
     //   magicArr.push(el);
     // });
-    // return { bLeauge, aLeague };
-    return aLeague[0];
+    return aLeague[2].split(" ");
+    // return aLeague[0][1];
   });
   console.log(content);
   await browser.close();
