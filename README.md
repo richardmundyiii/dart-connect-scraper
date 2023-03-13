@@ -1,6 +1,6 @@
 <div>
 
-# Dart Connect Web Scrapper
+# Dart Connect Web Scraper
 
 ##### A web-based app to scrape league standings from Dart Connect's public league standings page.
 

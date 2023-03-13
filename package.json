@@ -2,7 +2,7 @@
   "name": "dcscraper",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "mongoose": "^6.9.2",
+    "nodemon": "^2.0.21",
     "puppeteer": "^19.7.1"
   }
 }
